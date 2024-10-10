@@ -10,8 +10,8 @@ namespace HighestMatrixNumber
             int minNumber = 0;
             int maxNumber = 9;
             int[,] numbers = new int[10, 10];
-            int highestNumber = minNumber;
-            int newNumber = 0;
+            int highestNumber = int.MinValue;
+            int resetNumber = 0;
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
@@ -37,7 +37,7 @@ namespace HighestMatrixNumber
                 {
                     if (numbers[i, j] == highestNumber)
                     {
-                        numbers[i, j] = newNumber;
+                        numbers[i, j] = resetNumber;
                     }
 
                     Console.Write(numbers[i, j]);
